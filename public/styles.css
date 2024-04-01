@@ -125,8 +125,16 @@ body a {
 
 .supply-content h3 {
   color: #453F78;
+  font-size: 30px;
 }
 
+.name {
+  margin-left: 100px;
+}
+
+.description {
+  margin-left: 65px;
+}
   /* Close Button */
   .close {
     color: #7ed2ff;
@@ -230,6 +238,7 @@ cursor: pointer;
       float: left;
     }
 
+    
 /* Responsive layout - makes a two column layout instead of four columns */
 @media (max-width: 800px) {
   .flex-container {

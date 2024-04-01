@@ -34,17 +34,18 @@
       <h3>Make Changes to your Craft</h3>
       <form id="add-edit-craft-form" method="post">
           <input type="hidden" name="_id" value="-1" />
-      
+          <div class="name">
           <p>
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />
           </p>
-      
+      </div>
+      <div class ="description">
           <p>
               <label for="description">Description:</label>
               <input type="text" id="description" name="description" required />
           </p>
-      
+        </div>
           <section id="img-prev-section">
               <img id="img-prev">
               <label for="img" id="choose-file">Select an Image</label>

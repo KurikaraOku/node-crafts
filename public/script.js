@@ -14,6 +14,8 @@ window.onload = () => {
         document.getElementById("supply-boxes").innerHTML = "";
         document.getElementById("img").value = ""; 
         document.getElementById("img-prev").src = "";
+
+        
     };
 
    // Function to add craft
