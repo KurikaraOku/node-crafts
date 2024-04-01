@@ -75,6 +75,7 @@ addCraftForm.addEventListener("submit", addCraft);
 
                 const img = document.createElement("img");
                 img.src = craft.image ? "/crafts/" + craft.image : "";
+                img.classList.add("insertedImage");
 
                 img.addEventListener("click", () => {
                     const modal = document.getElementById("myModal");
@@ -111,7 +112,7 @@ addCraftForm.addEventListener("submit", addCraft);
             modals.forEach((modal) => {
                 modal.style.display = "none";
                 if (modal === addModal) {
-                    resetForm(); // Reset the form and clear input fields when closing add modal
+                    resetForm(); 
                 }
             });
         });
@@ -123,7 +124,7 @@ addCraftForm.addEventListener("submit", addCraft);
             if (event.target === modal) {
                 modal.style.display = "none";
                 if (modal === addModal) {
-                    resetForm(); // Reset the form and clear input fields when closing add modal
+                    resetForm(); 
                 }
             }
         });
@@ -131,15 +132,15 @@ addCraftForm.addEventListener("submit", addCraft);
 
     // Show add craft modal when clicking the "+" link
     addLink.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent the default link behavior
+        event.preventDefault(); 
         addModal.style.display = "block";
     });
 
     // Close add craft modal and reset the form when clicking "Cancel"
     cancelButton.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent the default button behavior
+        event.preventDefault();
         addModal.style.display = "none"; // Close the add craft modal
-        resetForm(); // Reset the form and clear input fields
+        resetForm(); 
     });
 
     const addSupply = (e) => {

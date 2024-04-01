@@ -22,9 +22,14 @@ body a {
 
 .flex-container {
     display: flex;
+    flex: 25%;
     flex-wrap: wrap;
     justify-content: space-evenly; 
     align-items: flex-start; 
+}
+
+.flex-container img {
+  size: 3px;
 }
 
 /* The Modal (background) */
@@ -149,14 +154,21 @@ body a {
   #img {
     padding-right: 600px;
   }
+
+  .insertedImage {
+    max-width: 320px;
+    flex: 25%;
+    margin-top: 8px;
+    vertical-align: middle;
+  }
   
   #img-prev-section {
     align-items: center;
     display: flex;
     position: relative;
-    width: 150px;
+    width: 200px;
     border: 1px solid #000000;
-    max-width: 150px;
+    max-width: 200px;
     margin-right: 5px;
     height: 200px;
     float: left;
@@ -199,9 +211,17 @@ cursor: pointer;
       float: left;
     }
 
-@media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Responsive layout - makes a two column layout instead of four columns */
+@media (max-width: 800px) {
+  .flex-container {
+      justify-content: space-between;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .flex-container {
+      flex-direction: column;
+      align-items: center;
+  }
 }
