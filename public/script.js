@@ -113,6 +113,7 @@ addCraftForm.addEventListener("submit", addCraft);
                 modal.style.display = "none";
                 if (modal === addModal) {
                     resetForm(); 
+                    document.body.classList.remove("show-overlay"); 
                 }
             });
         });
@@ -150,6 +151,8 @@ addCraftForm.addEventListener("submit", addCraft);
     const input = document.createElement("input");
     input.type = "text";
     supplyBoxes.append(input);
+    document.body.classList.add("show-overlay");  
+
     };
     // Call the function to show crafts when the window loads
     showCrafts();

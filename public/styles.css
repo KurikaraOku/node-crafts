@@ -28,9 +28,6 @@ body a {
     align-items: flex-start; 
 }
 
-.flex-container img {
-  size: 3px;
-}
 
 /* The Modal (background) */
 .modal {
@@ -85,6 +82,28 @@ body a {
   min-height: 58%; 
   border-radius: 15px;
   box-sizing: border-box; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; /* transition effect */
+}
+
+/* Show the modal when it has the 'show' class */
+.supply-content.show {
+  opacity: 1; 
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* animation to the supply modal */
+.supply-content, .modal-content {
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeIn 0.3s ease forwards; 
 }
 
 .supply-content img {
@@ -107,7 +126,7 @@ body a {
 .supply-content h3 {
   color: #453F78;
 }
-  
+
   /* Close Button */
   .close {
     color: #7ed2ff;
@@ -166,9 +185,9 @@ body a {
     align-items: center;
     display: flex;
     position: relative;
-    width: 200px;
+    width: 150px;
     border: 1px solid #000000;
-    max-width: 200px;
+    max-width: 150px;
     margin-right: 5px;
     height: 200px;
     float: left;
