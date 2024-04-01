@@ -1,0 +1,207 @@
+/* Body */
+body {
+    margin-top: 20px;
+    background-color: #453F78;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+body h1 {
+    color: #C08B5C;
+    margin-top: 100px;
+    font-size: 40px;
+    margin-left: 25px;
+    text-align: left;
+}
+
+body a {
+  text-decoration: none;
+  font-size: larger;
+  color: #FFC94A;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: flex-start; 
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; 
+  }
+  
+ /* Crafts Modal Content */
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  min-height: 70%; 
+  border-radius: 15px;
+  box-sizing: border-box; 
+}
+
+.modal-content img {
+  display: block;
+  float: left;
+  max-width: 35%; 
+  margin: 0 auto; 
+}
+
+.modal-content p {
+  font-size: 13.5px;
+}
+
+.modal-content h2 {
+  text-align: left;
+  font-size: 40px;
+  color: #453F78;
+}
+
+.modal-content h3 {
+  color: #453F78;
+}
+
+/* Add Supply Modal */
+.supply-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  min-height: 55%; 
+  border-radius: 15px;
+  box-sizing: border-box; 
+}
+
+.supply-content img {
+  display: block;
+  float: left;
+  max-width: 35%; 
+  margin: 0 auto; 
+}
+
+.supply-content p {
+  font-size: 13.5px;
+}
+
+.supply-content h2 {
+  text-align: left;
+  font-size: 40px;
+  color: #453F78;
+}
+
+.supply-content h3 {
+  color: #453F78;
+}
+  
+  /* Close Button */
+  .close {
+    color: #7ed2ff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+
+  #add-edit-craft-form input[type="text"],
+#add-edit-craft-form input[type="file"],
+#add-edit-craft-form input[type="supply"] {
+    width: 200px; 
+}
+  
+  #modal-supplies {
+    list-style-type: none;
+}
+
+/* Buttons */
+  #save, #cancel, #add-supply, #choose-file {
+    background-color: #467dd4; 
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #choose-file {
+    position: absolute; /* Set the position to absolute */
+    bottom: -70px; /* Adjust the vertical position */
+    right: 0; /* Adjust the horizontal position */
+    cursor: pointer;
+}
+
+  /* image section */ 
+
+  #img {
+    padding-right: 600px;
+  }
+  
+  #img-prev-section {
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 150px;
+    border: 1px solid #000000;
+    max-width: 150px;
+    margin-right: 5px;
+    height: 200px;
+    float: left;
+  }
+  #img-prev {
+    display: block;
+    margin: auto;
+    max-width: 150px;
+    height: 200px;
+    float: left;
+  }
+
+  #supplies-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#supplies-p {
+  margin-top: 0; /* Remove default top margin for <p> */
+}
+
+#supplies-p label.inline {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+  
+#choose-file {
+  cursor: pointer;
+}
+
+#img {
+  display: none; /* Hide the input file button */
+}
+    /* Hover effect */
+    .close:hover {
+color: #fff719;
+cursor: pointer;
+    }
+
+    .columns img {
+      float: left;
+    }
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
