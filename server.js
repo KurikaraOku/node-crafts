@@ -11,8 +11,16 @@ app.use(express.json());
 const cors = require("cors");
 app.use(cors());
 
-  const upload = multer({ dest: __dirname + "/public/crafts" });
-
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "./public/crafts/");
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+  
+  const upload = multer({ storage: storage });
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -315,6 +323,30 @@ app.post("/api/crafts", upload.single("img"), (req, res) => {
     }
   
     crafts.push(craft);
+    res.json(crafts);
+  });
+
+  app.put("/api/crafts/:id", upload.single("img"), (req, res) => {
+    console.log("in put");
+    const id = parseInt(req.params.id);
+
+    const craft = crafts.find((r) => r._id === id);
+
+    const result = validateCraft(req.body);
+
+    if (result.error) {
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    craft.name = req.body.name;
+    craft.descript = req.body.description;
+    craft.supplies = req.body.supplies.split(",");
+
+    if (req.file) {
+        craft.image = "crafts/" + req.file.filename;
+      }
+      
     res.json(crafts);
   });
 

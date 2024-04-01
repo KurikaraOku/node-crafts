@@ -152,6 +152,7 @@ addCraftForm.addEventListener("submit", addCraft);
     };
     // Call the function to show crafts when the window loads
     showCrafts();
+
     document.getElementById("add-supply").onclick = addSupply;
 
     document.getElementById("img").onchange = (e) => {
