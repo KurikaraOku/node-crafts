@@ -319,7 +319,7 @@ app.post("/api/crafts", upload.single("img"), (req, res) => {
     };
   
     if (req.file) {
-      craft.image = "crafts/" + req.file.filename;
+      craft.image = req.file.filename;
     }
   
     crafts.push(craft);
@@ -344,9 +344,9 @@ app.post("/api/crafts", upload.single("img"), (req, res) => {
     craft.supplies = req.body.supplies.split(",");
 
     if (req.file) {
-        craft.image = "crafts/" + req.file.filename;
+        craft.image = req.file.filename;
       }
-      
+
     res.json(crafts);
   });
 
